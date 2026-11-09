@@ -1,9 +1,10 @@
 name: Milestone Closure
 
-on: 
-  milestone:
-    types: [closed]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on: 
+#   milestone:
+#     types: [closed]
+# 
 env:
   CA_FILE: /tmp/ca.pem
   URL: https://discuss.axoniq.io/posts.json

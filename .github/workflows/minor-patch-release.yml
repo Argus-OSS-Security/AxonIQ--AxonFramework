@@ -10,23 +10,24 @@ name: Minor/Patch Release
 #   3. only once release:perform succeeded: push the release commits and tag to the
 #      patch branch, so a failed deploy never leaves it with a commit/tag to revert
 
-on:
-  workflow_dispatch:
-    inputs:
-      RELEASE_VERSION:
-        description: 'Version being released, e.g. 5.4.1'
-        required: true
-        type: string
-      DEVELOPMENT_VERSION:
-        description: 'Next development version for the patch branch, e.g. 5.4.2-SNAPSHOT'
-        required: true
-        type: string
-      DRY_RUN:
-        description: 'Simulate the release: runs release:prepare -DdryRun (no commit/tag), skips push and release:perform'
-        required: true
-        type: boolean
-        default: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       RELEASE_VERSION:
+#         description: 'Version being released, e.g. 5.4.1'
+#         required: true
+#         type: string
+#       DEVELOPMENT_VERSION:
+#         description: 'Next development version for the patch branch, e.g. 5.4.2-SNAPSHOT'
+#         required: true
+#         type: string
+#       DRY_RUN:
+#         description: 'Simulate the release: runs release:prepare -DdryRun (no commit/tag), skips push and release:perform'
+#         required: true
+#         type: boolean
+#         default: true
+# 
 permissions:
   contents: write
 

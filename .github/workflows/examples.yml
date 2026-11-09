@@ -1,12 +1,13 @@
 name: Axon Framework with Examples
 
 # The module split makes the examples brittle to run at this point in time
-on:
-  workflow_dispatch:
-  pull_request:
-    paths-ignore:
-      - 'docs/**'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   pull_request:
+#     paths-ignore:
+#       - 'docs/**'
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true

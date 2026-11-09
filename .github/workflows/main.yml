@@ -1,14 +1,15 @@
 name: Axon Framework
 
-on:
-  push:
-    branches:
-      - main
-      - master
-      - 'axon-5.*.x'
-    paths-ignore:
-      - 'docs/**'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - main
+#       - master
+#       - 'axon-5.*.x'
+#     paths-ignore:
+#       - 'docs/**'
+# 
 jobs:
   build:
     name: Test and Build on JDK ${{ matrix.java-version }}

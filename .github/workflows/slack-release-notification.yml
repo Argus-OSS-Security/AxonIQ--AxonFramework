@@ -1,10 +1,11 @@
 name: Announce release on Slack
 
-on:
-  # Triggers the workflow on new release
-    release:
-      types: [ published ]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   # Triggers the workflow on new release
+#     release:
+#       types: [ published ]
+# 
 jobs:
   my-job:
     name: Slack notification

@@ -12,31 +12,32 @@ name: Major Release
 #   4. branch RELEASE_BRANCH_NAME off main's new HEAD and set its version to
 #      DEVELOPMENT_PATCH_VERSION
 
-on:
-  workflow_dispatch:
-    inputs:
-      RELEASE_VERSION:
-        description: 'Version being released, e.g. 5.4.0'
-        required: true
-        type: string
-      DEVELOPMENT_VERSION:
-        description: 'Next development version for main, e.g. 5.5.0-SNAPSHOT'
-        required: true
-        type: string
-      DEVELOPMENT_PATCH_VERSION:
-        description: 'Development version for the new patch branch, e.g. 5.4.1-SNAPSHOT'
-        required: true
-        type: string
-      RELEASE_BRANCH_NAME:
-        description: 'Name of the patch branch to create, e.g. axon-5.4.x'
-        required: true
-        type: string
-      DRY_RUN:
-        description: 'Simulate the release: runs release:prepare -DdryRun (no commit/tag), skips push, release:perform, and branch creation'
-        required: true
-        type: boolean
-        default: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       RELEASE_VERSION:
+#         description: 'Version being released, e.g. 5.4.0'
+#         required: true
+#         type: string
+#       DEVELOPMENT_VERSION:
+#         description: 'Next development version for main, e.g. 5.5.0-SNAPSHOT'
+#         required: true
+#         type: string
+#       DEVELOPMENT_PATCH_VERSION:
+#         description: 'Development version for the new patch branch, e.g. 5.4.1-SNAPSHOT'
+#         required: true
+#         type: string
+#       RELEASE_BRANCH_NAME:
+#         description: 'Name of the patch branch to create, e.g. axon-5.4.x'
+#         required: true
+#         type: string
+#       DRY_RUN:
+#         description: 'Simulate the release: runs release:prepare -DdryRun (no commit/tag), skips push, release:perform, and branch creation'
+#         required: true
+#         type: boolean
+#         default: true
+# 
 permissions:
   contents: write
 
